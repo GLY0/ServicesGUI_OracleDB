@@ -1,0 +1,25 @@
+--se crea el usuario
+CREATE USER grupoG
+IDENTIFIED BY g123
+default tablespace system
+temporary tablespace temp
+quota 15M ON SYSTEM;
+--privilegios para iniciar session, tabla eh insertar 
+GRANT CREATE SESSION TO grupoG;
+GRANT CREATE TABLE TO grupoG;
+
+GRANT INSERT ON grupoG.usuario TO grupoG;
+
+--insert into usuario values('grupoA','1234');
+
+
+CREATE TABLE usuario
+(
+cedula number(10) NOT NULL, 
+nombre VARCHAR(50) NOT NULL,
+apellido VARCHAR(50) NOT NULL,
+fecha VARCHAR(50) NOT NULL, 
+rol VARCHAR(30) NOT NULL,
+clave VARCHAR(20) NOT NULL);
+
+select * from usuario;

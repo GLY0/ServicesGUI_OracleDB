@@ -1,0 +1,21 @@
+
+create table evento
+(
+  tipoEvento VARCHAR2(100),
+  nombre VARCHAR2(20),
+  apellido VARCHAR2(20),
+  cedula VARCHAR2(10),
+  invitados NUMBER not null,
+  fecha VARCHAR2(15),
+  horario VARCHAR2(20),
+  lugar VARCHAR2(20),
+  fotografia CHAR(2),
+  cathering CHAR(2),
+  decoracion CHAR(2)
+);
+drop table evento
+select * from evento
+delete evento
+where cedula = 1232214124 ; 
+/*ALTER TABLE EVENTOS 
+ADD CONSTRAINT ID_EVENTO_PK PRIMARY KEY (ID_EVENTO);*/
